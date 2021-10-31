@@ -1,0 +1,23 @@
+@import (reference) '../../less/variables.less';
+
+.catalog-nav {
+	height: 64px;
+	display: flex;
+	overflow-x: auto;
+	padding: 0 16px;
+
+	&__item {
+		flex: 1 1 auto;
+		height: 100%;
+		white-space: nowrap;
+		display: flex;
+		align-items: center;
+		padding: 0 16px;
+		font-size: 16px;
+
+		&.is-active {
+			color: @color-peach;
+			text-decoration: underline;
+		}
+	}
+}

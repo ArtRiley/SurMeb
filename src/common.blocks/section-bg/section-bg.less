@@ -1,0 +1,14 @@
+@import (reference) '../../less/variables.less';
+
+.section-bg {
+	height: 160px;
+	position: relative;
+
+	@media (min-width: @tablet) {
+		height: 300px;
+	}
+
+	&__img {
+		@fill-bg-img();
+	}
+}

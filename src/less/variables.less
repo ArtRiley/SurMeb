@@ -1,0 +1,58 @@
+// colors
+@color-peach: #FFC076;
+@color-gray: #B9B9B9;
+@color-gray-dark: #6F6F6F;
+@color-black: #252525;
+
+@color-brand: @color-peach;
+@color-text: @color-gray-dark;
+
+/*----------------------------------------------------*/
+
+// breakpoints
+@full: 1400px;
+@desktop: 1200px;
+@tablet: 768px;
+@mobile: 320px;
+
+/*----------------------------------------------------*/
+
+// mixins
+
+//заполнение блока дочерним изображением и заданием размера с соотношением сторон, заданным в родителе
+//--aspect-ratio: 16/9;
+@img-block: {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-bottom: calc(100% / (var(--aspect-ratio)));
+	}
+
+	& img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
+
+//заполнение блока дочерним изображением и абсолютным позиционированием
+@fill-bg-img: {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}

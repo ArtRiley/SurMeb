@@ -1,0 +1,30 @@
+@import (reference) '../../../less/variables.less';
+
+.link-video {
+	display: flex;
+	align-items: center;
+
+	&__caption {
+		text-transform: uppercase;
+		font-size: 24px;
+		padding-right: 10px;
+		color: #fff;
+
+		@media (min-width: @tablet) {
+			font-size: 32px;
+		}
+	}
+
+	&__icon {
+
+		& svg {
+			width: 30px;
+			height: 30px;
+
+			@media (min-width: @tablet) {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+}

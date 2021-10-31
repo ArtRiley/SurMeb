@@ -1,0 +1,209 @@
+@import (reference) '../../less/variables.less';
+
+.footer {
+	padding: 30px 0 70px;
+	background-color: @color-black;
+	color: #fff;
+
+	@media (min-width: @desktop) {
+		padding: 70px 0 40px;
+	}
+
+	&__inner {
+
+		@media (min-width: @desktop) {
+			display: flex;
+		}
+	}
+
+	&__left {
+		padding: 0 0 30px 0;
+		border-bottom: 1px solid @color-peach;
+
+		@media (min-width: @desktop) {
+			border-bottom: unset;
+			border-right: 1px solid @color-peach;
+			padding: 0 30px 30px 0;
+			flex: 0 0 50%;
+		}
+
+		@media (min-width: @full) {
+			padding: 0 100px 30px 0;
+		}
+	}
+
+	&__left-head {
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 16px;
+
+		@media (min-width: @tablet) {
+			font-size: 48px;
+		}
+
+		@media (min-width: @desktop) {
+			text-align: left;
+		}
+	}
+
+	&__social {
+		display: flex;
+		justify-content: center;
+		grid-gap: 18px;
+
+		@media (min-width: @desktop) {
+			justify-content: flex-start;
+		}
+
+		& a {
+
+			& svg {
+				fill: #fff;
+				width: 20px;
+				height: 20px;
+
+				@media (min-width: @tablet) {
+					width: 26px;
+					height: 26px;
+				}
+			}
+		}
+	}
+
+	&__contacts {
+
+	}
+
+	&__right {
+		padding: 30px 0 0 0;
+
+		@media (min-width: @desktop) {
+			flex: 0 0 50%;
+			padding: 0 0 0 30px;
+		}
+
+		@media (min-width: @full) {
+			padding: 0 0 0 100px;
+		}
+	}
+
+	&.points-bg {
+
+		&:before,
+		&:after {
+			display: block;
+			top: unset;
+			bottom: -155px;
+		}
+
+		&:before {
+			left: -160px;
+			@media (min-width: @tablet) { left: -100px; }
+		}
+
+		&:after {
+			right: -160px;
+			@media (min-width: @tablet) { right: -100px; }
+		}
+	}
+}
+
+.footer-contacts {
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		@media (min-width: @tablet) {
+			justify-content: center;
+		}
+
+		@media (min-width: @desktop) {
+			justify-content: flex-start;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+
+			@media (min-width: @tablet) {
+				margin-bottom: 30px;
+			}
+		}
+
+		& svg {
+			flex-shrink: 0;
+			fill: @color-peach;
+			width: 20px;
+			height: 20px;
+		}
+
+		& span {
+			padding-left: 16px;
+			font-size: 18px;
+
+			@media (min-width: @tablet) {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+.subscribe {
+
+	&__title {
+		font-size: 24px;
+		color: #C8C8C8;
+		text-align: center;
+		margin-bottom: 10px;
+
+		@media (min-width: @desktop) {
+			text-align: left;
+		}
+	}
+
+	&__subtitle {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 40px;
+
+		@media (min-width: @desktop) {
+			text-align: left;
+		}
+	}
+
+	&__input {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+
+		@media (min-width: @desktop) {
+			justify-content: flex-start;
+		}
+
+		& input {
+			width: 220px;
+		}
+	}
+
+	&__agree {
+		display: flex;
+		justify-content: center;
+
+		@media (min-width: @desktop) {
+			justify-content: flex-start;
+		}
+
+		& .checkbox__caption {
+			color: #C8C8C8;
+			max-width: 190px;
+
+			@media (min-width: @tablet) {
+				max-width: unset;
+			}
+		}
+	}
+}

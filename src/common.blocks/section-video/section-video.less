@@ -1,0 +1,66 @@
+@import (reference) '../../less/variables.less';
+
+.section-video {
+	position: relative;
+	padding: 100px 16px;
+
+	@media (min-width: @tablet) {
+		padding: 150px 16px;
+	}
+
+	@media (min-width: @desktop) {
+		padding: 200px 16px;
+	}
+
+	&__bg {
+		@fill-bg-img();
+	}
+
+	&__label {
+		cursor: pointer;
+		margin: 0 auto;
+		max-width: 650px;
+		position: relative;
+		background: rgba(255, 255, 255, 0.9);
+		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.14);
+		border-radius: 5px;
+		padding: 16px 16px 40px;
+
+		@media (min-width: @tablet) {
+			padding: 24px 24px 80px;
+		}
+	}
+
+	&__description {
+		text-align: center;
+		font-size: 18px;
+		color: #6F6F6F;
+
+		@media (min-width: @tablet) {
+			font-size: 28px;
+		}
+
+		& p {
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	&__play {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 50%);
+
+		& img {
+			display: block;
+			width: 68px;
+
+			@media (min-width: @tablet) {
+				width: 116px;
+			}
+		}
+	}
+}
