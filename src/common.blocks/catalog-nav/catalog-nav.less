@@ -5,6 +5,8 @@
 	display: flex;
 	overflow-x: auto;
 	padding: 0 16px;
+	margin: 0 auto;
+	max-width: 1240px;
 
 	&__item {
 		flex: 1 1 auto;
@@ -12,12 +14,18 @@
 		white-space: nowrap;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		padding: 0 16px;
 		font-size: 16px;
+		cursor: pointer;
 
 		&.is-active {
 			color: @color-peach;
-			text-decoration: underline;
+			font-weight: 500;
+		}
+
+		&_link {
+			font-weight: 700;
 		}
 	}
 }
