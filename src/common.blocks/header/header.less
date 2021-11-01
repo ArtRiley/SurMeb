@@ -4,6 +4,23 @@
 	position: relative;
 	z-index: 1;
 
+	@media (min-width: @desktop) {
+		display: flex;
+	}
+
+	&__logo {
+
+		& img {
+			display: block;
+			margin: 0 auto;
+			height: 50px;
+
+			@media (min-width: @desktop) {
+				height: 62px;
+			}
+		}
+	}
+
 	&__group {
 		position: fixed;
 		top: 0;
@@ -15,6 +32,18 @@
 		padding: 60px 30px 30px 30px;
 		transform: translateX(-100%);
 		transition: transform .3s ease;
+
+		@media (min-width: @desktop) {
+			position: unset;
+			top: unset;
+			left: unset;
+			width: unset;
+			height: unset;
+			overflow: unset;
+			background-color: unset;
+			padding: unset;
+			transform: unset;
+		}
 	}
 
 	&.is-open &__group {
@@ -23,18 +52,53 @@
 
 	&__group-inner {
 
+		@media (min-width: @desktop) {
+			display: flex;
+		}
 	}
 
-	&__logo {
+	&__menu {
+		margin-bottom: 16px;
+	}
 
-		& img {
-			display: block;
-			margin: 0 auto;
+	&__social {
+		display: flex;
+		margin-bottom: 16px;
+
+		& a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 8px;
+
+			& svg {
+				width: 20px;
+				height: 20px;
+				fill: #fff;
+			}
+		}
+	}
+
+	&__connection {
+		display: flex;
+		margin-bottom: 16px;
+
+		& a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 8px;
+
+			& svg {
+				width: 20px;
+				height: 20px;
+				fill: @color-peach;
+			}
 		}
 	}
 
 	&__link {
-		display: none;
+
 	}
 }
 
@@ -43,14 +107,24 @@
 	align-items: center;
 
 	span {
+		font-size: 18px;
 		color: #fff;
 		padding-right: 8px;
 		white-space: nowrap;
+
+		@media (min-width: @desktop) {
+			font-size: 16px;
+		}
 	}
 
 	& svg {
 		fill: #fff;
-		width: 24px;
-		height: 24px;
+		width: 28px;
+		height: 28px;
+
+		@media (min-width: @desktop) {
+			width: 24px;
+			height: 24px;
+		}
 	}
 }
