@@ -1,6 +1,16 @@
 <section class="section-compilation">
 	<div class="section-compilation__nav">
-		${require('../.././common.blocks/catalog-nav/catalog-nav.html')}
+		<div class="catalog-nav">
+			<div class="catalog-nav__item is-active">Кухни</div>
+			<div class="catalog-nav__item">Гостиные</div>
+			<div class="catalog-nav__item">Спальни</div>
+			<div class="catalog-nav__item">Детские</div>
+			<div class="catalog-nav__item">Шкафы-купе</div>
+			<div class="catalog-nav__item">Прихожие</div>
+			<div class="catalog-nav__item">Столы</div>
+			<div class="catalog-nav__item">Комплектующие</div>
+			<a href="#" class="catalog-nav__item catalog-nav__item_link">&#9679; Виртуальный каталог &#9679;</a>
+		</div>
 	</div>
 	<div class="section-compilation__banner">
 		<div class="compilation-banner points-bg">
@@ -8,65 +18,49 @@
 			<div class="compilation-banner__caption">Все тренды у нас</div>
 		</div>
 	</div>
-	<div class="section-compilation__list">
-		<div class="compilation-list">
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Топовые кухни"></div>
-					<div class="compilation-card__title">Топовые кухни</div>
+	<div class="section-compilation__array">
+
+		<div class="section-compilation__array-item is-active">
+			<div class="section-compilation__list">
+				<div class="compilation-list">
+					<div class="compilation-list__item">
+						${require('../.././common.blocks/section-compilation/compilation-card.html')}
+					</div>
 				</div>
 			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Классика"></div>
-					<div class="compilation-card__title">Классика</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Лофт"></div>
-					<div class="compilation-card__title">Лофт</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Для больших пространств"></div>
-					<div class="compilation-card__title">Для больших пространств</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Прямые кухни"></div>
-					<div class="compilation-card__title">Прямые кухни</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Маленькие кухни"></div>
-					<div class="compilation-card__title">Маленькие кухни</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Эмаль"></div>
-					<div class="compilation-card__title">Эмаль</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Кухни до потолка"></div>
-					<div class="compilation-card__title">Кухни до потолка</div>
-				</div>
-			</div>
-			<div class="compilation-list__item">
-				<div class="compilation-card">
-					<div class="compilation-card__img"><img src="./img/compilation-preview.png" alt="Угловые кухни"></div>
-					<div class="compilation-card__title">Угловые кухни</div>
-				</div>
+			<div class="section-compilation__link">
+				<a href="">Посмотреть все кухни</a>
 			</div>
 		</div>
-	</div>
-	<div class="section-compilation__link">
-		<a href="">Посмотреть все кухни</a>
+
+		<div class="section-compilation__array-item">
+			<div class="section-compilation__list">
+				<div class="compilation-list">
+					<div class="compilation-list__item">
+						${require('../.././common.blocks/section-compilation/compilation-card.html')}
+					</div>
+					<div class="compilation-list__item">
+						${require('../.././common.blocks/section-compilation/compilation-card.html')}
+					</div>
+				</div>
+			</div>
+			<div class="section-compilation__link">
+				<a href="">Посмотреть все гостиные</a>
+			</div>
+		</div>
+
+		<div class="section-compilation__array-item">
+			<div class="section-compilation__list">
+				<div class="compilation-list">
+					<div class="compilation-list__item">
+						${require('../.././common.blocks/section-compilation/compilation-card.html')}
+					</div>
+				</div>
+			</div>
+			<div class="section-compilation__link">
+				<a href="">Посмотреть все спальни</a>
+			</div>
+		</div>
+
 	</div>
 </section>

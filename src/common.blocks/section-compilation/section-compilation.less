@@ -11,6 +11,18 @@
 		margin-bottom: 15px;
 	}
 
+	&__array {
+
+	}
+
+	&__array-item {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
+	}
+
 	&__list {
 
 	}
@@ -91,6 +103,7 @@
 
 .compilation-card {
 	position: relative;
+	cursor: pointer;
 
 	&__img {
 		--aspect-ratio: 16/9;
