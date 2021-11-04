@@ -6,8 +6,10 @@ catalogTabs.click((e) => {
   const target = $(e.currentTarget);
   const index = target.index();
   target.addClass('is-active');
+  $('.section-compilation__grid ').removeClass('is-active');
   catalogCompilations.removeClass('is-active');
   catalogCompilations.eq(index).addClass('is-active');
+  catalogCompilations.eq(index).find('.section-compilation__list').addClass('is-active');
 });
 
 $('.compilation-list').each((i, list) => {
@@ -20,7 +22,7 @@ $('.compilation-list').each((i, list) => {
     $(card).click((e) => {
       const target = $(e.currentTarget);
       console.log(target);
-      target.closest('.section-compilation__list').addClass('is-hidden');
+      target.closest('.section-compilation__list').removeClass('is-active');
       grids.removeClass('is-active');
       $(grids[index]).addClass('is-active');
     });
@@ -30,6 +32,6 @@ $('.compilation-list').each((i, list) => {
 $('.js-close-grid').click((e) => {
   const target = $(e.currentTarget);
   target.closest('.section-compilation__grid').removeClass('is-active');
-  target.closest('.section-compilation__array-item').find('.section-compilation__list').removeClass('is-hidden');
+  target.closest('.section-compilation__array-item').find('.section-compilation__list').addClass('is-active');
 });
 

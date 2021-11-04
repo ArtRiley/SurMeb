@@ -17,12 +17,20 @@
 
 	&__array-item {
 		display: none;
-		&.is-active { display: block; }
+
+		&.is-active {
+			display: block;
+			animation: show-block .5s ease-out;
+		}
 	}
 
 	&__list {
+		display: none;
 
-		&.is-hidden { display: none; }
+		&.is-active {
+			display: block;
+			animation: show-block .5s ease-out;
+		}
 	}
 
 	&__grid-array {}
@@ -31,7 +39,10 @@
 		display: none;
 		padding: 0 16px;
 
-		&.is-active { display: block; }
+		&.is-active {
+			display: block;
+			animation: show-block .5s ease-out;
+		}
 	}
 
 	&__link {
