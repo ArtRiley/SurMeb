@@ -20,16 +20,16 @@ $('.compilation-list').each((i, list) => {
     $(card).click((e) => {
       const target = $(e.currentTarget);
       console.log(target);
+      target.closest('.section-compilation__list').addClass('is-hidden');
       grids.removeClass('is-active');
       $(grids[index]).addClass('is-active');
     });
   });
-  // compilationCards.click((e) => {
-  //   const target = $(e.currentTarget);
-  //   const index = target.index();
-  //   const grids = target.closest('.section-compilation__array-item')
-  // .find('.section-compilation__grid');
-  //   console.log(index);
-  //   console.log(grids);
-  // });
 });
+
+$('.js-close-grid').click((e) => {
+  const target = $(e.currentTarget);
+  target.closest('.section-compilation__grid').removeClass('is-active');
+  target.closest('.section-compilation__array-item').find('.section-compilation__list').removeClass('is-hidden');
+});
+
