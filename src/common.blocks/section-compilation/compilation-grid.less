@@ -60,6 +60,7 @@
 	grid-template-columns: repeat(1, 1fr);
 	grid-auto-rows: 80px;
 	gap: 16px;
+	position: relative;
 
 	@media(min-width: @tablet) {
 		grid-template-columns: repeat(2, 1fr);
@@ -79,7 +80,6 @@
 		grid-auto-rows: 80px;
 
 		&__item {
-			position: relative;
 
 			&:nth-child(8n + 1) {
 				grid-column: auto / span 2;
@@ -125,14 +125,28 @@
 
 	&__item {
 		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		cursor: pointer;
+		overflow: hidden;
 	}
 
 	&__img {
 		@fill-bg-img();
+		transition: transform .3s ease-out;
+	}
+
+	&__item:hover &__img {
+		transform: scale(1.1);
 	}
 
 	&__title {
-		font-size: 16px;
-		display: none;
+		background-color: rgba(255, 255, 255, 0.8);
+		font-size: 20px;
+		text-align: right;
+		max-width: 80%;
+		position: relative;
+		padding: 8px 30px;
 	}
 }
