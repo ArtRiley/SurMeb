@@ -63,3 +63,7 @@
 
 // normalize.css
 require('normalize.css/normalize.css');
+
+// glightbox
+require("glightbox/dist/js/glightbox");
+require("glightbox/dist/css/glightbox.css");
