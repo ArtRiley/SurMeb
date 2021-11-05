@@ -236,6 +236,10 @@ module.exports = {
       // chunksSortMode: 'manual',
       // chunks: ['vendor', 'common'],
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/catalog.html',
+      filename: 'catalog.html',
+    }),
     // для добавления отдельной html страницы нужно подключить новый HtmlWebpackPlugin
     /* new HtmlWebpackPlugin({
       template: 'src/test.html',
