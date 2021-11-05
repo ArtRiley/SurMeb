@@ -27,8 +27,8 @@
 
 .popup {
   margin: 0 auto;
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
   padding: 16px;
   background-color: #fff;
   position: relative;
@@ -37,12 +37,17 @@
     padding: 40px;
   }
 
+  &_compilation {
+	  padding: unset;
+	  max-width: 1200px;
+  }
+
   &_small {
-    width: 500px;
+	  max-width: 500px;
   }
 
   &_big {
-    width: 840px;
+	  max-width: 840px;
   }
 
   &__close {
@@ -128,4 +133,32 @@
     color: @color-text;
     white-space: nowrap;
   }
+}
+
+.product-popup-simple {
+
+	&__img {
+		--aspect-ratio: 16/9;
+		@img-block();
+	}
+
+	&__links {
+		background-color: @color-black;
+		width: 100%;
+		padding: 16px 30px;
+
+		@media (min-width: @desktop) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__button {
+		display: block;
+		text-align: center;
+		border: 2px solid @color-peach;
+		padding: 8px 40px;
+		color: #fff;
+	}
 }
