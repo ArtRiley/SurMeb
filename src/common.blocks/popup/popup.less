@@ -1,138 +1,130 @@
 @import (reference) '../../less/variables.less';
 
 .popup-frame {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 4;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .3s ease-out;
-  padding: 60px 16px 16px;
-  overflow-y: auto;
-  backdrop-filter: blur(5px);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 4;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .3s ease-out;
+	padding: 60px 16px 16px;
+	overflow-y: auto;
+	backdrop-filter: blur(5px);
 
-  @media (min-width: @desktop) {
-    padding: 100px 16px 16px;
-  }
+	@media (min-width: @desktop) {
+		padding: 100px 16px 16px;
+	}
 
-  &.is-open {
-    opacity: 1;
-    pointer-events: auto;
-  }
+	&.is-open {
+		opacity: 1;
+		pointer-events: auto;
+	}
 }
 
 .popup {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 500px;
-  padding: 16px;
-  background-color: #fff;
-  position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
+	padding: 16px;
+	background-color: #fff;
+	position: relative;
 
-  @media (min-width: @desktop) {
-    padding: 40px;
-  }
+	@media (min-width: @desktop) {
+		padding: 40px;
+	}
 
-  &_compilation {
-	  padding: unset;
-	  max-width: 1200px;
-  }
+	&_compilation {
+		padding: unset;
+		max-width: 1200px;
+	}
 
-  &_small {
-	  max-width: 500px;
-  }
+	&__close {
+		position: absolute;
+		top: -40px;
+		right: 0;
+		cursor: pointer;
 
-  &_big {
-	  max-width: 840px;
-  }
+		@media (min-width: @desktop) {
+			top: -56px;
+			right: -56px;
+		}
 
-  &__close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    cursor: pointer;
+		& svg {
+			display: block;
+			width: 24px;
+			height: 24px;
+			fill: #fff;
 
-    @media (min-width: @desktop) {
-      top: -56px;
-      right: -56px;
-    }
+			@media (min-width: @desktop) {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
 
-    & svg {
-      display: block;
-      width: 24px;
-      height: 24px;
-      fill: #fff;
+	&__body {
 
-      @media (min-width: @desktop) {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  }
+		& *:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-  &__body {
+	&__video-wrap {
+		margin: -16px -16px 40px;
+		position: relative;
+		--aspect-ratio: 16/9;
 
-    & *:last-child {
-      margin-bottom: 0;
-    }
-  }
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: calc(100% / (var(--aspect-ratio)));
+		}
 
-  &__video-wrap {
-    margin: -16px -16px 40px;
-    position: relative;
-    --aspect-ratio: 16/9;
+		@media (min-width: @desktop) {
+			margin: -40px -40px 40px;
+		}
+	}
 
-    &:before {
-      content: '';
-      display: block;
-      padding-bottom: calc(100% / (var(--aspect-ratio)));
-    }
+	&__video {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
-    @media (min-width: @desktop) {
-      margin: -40px -40px 40px;
-    }
-  }
+	&__title {
+		margin-bottom: 24px;
+	}
 
-  &__video {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+	&__img {
+		width: 100%;
+		display: block;
+		margin: 24px 0;
+	}
 
-  &__title {
-    margin-bottom: 24px;
-  }
+	&__text {
+		font-size: 12px;
+	}
 
-  &__img {
-    width: 100%;
-    display: block;
-    margin: 24px 0;
-  }
+	&__description {
+		font-size: 16px;
+		margin: 24px 0;
 
-  &__text {
-    font-size: 12px;
-  }
+		@media (min-width: @desktop) {
+			font-size: 18px;
+		}
+	}
 
-  &__description {
-    font-size: 16px;
-    margin: 24px 0;
-
-    @media (min-width: @desktop) {
-      font-size: 18px;
-    }
-  }
-
-  & .subtext .phone {
-    color: @color-text;
-    white-space: nowrap;
-  }
+	& .subtext .phone {
+		color: @color-text;
+		white-space: nowrap;
+	}
 }
 
 .product-popup-simple {
@@ -146,11 +138,20 @@
 		background-color: @color-black;
 		width: 100%;
 		padding: 16px 30px;
+		display: flex;
+		flex-direction: column;
+		grid-gap: 16px;
+
+		@media (min-width: @tablet) {
+			flex-direction: row;
+		}
 
 		@media (min-width: @desktop) {
 			position: absolute;
 			bottom: 0;
 			left: 0;
+			padding: 16px 120px;
+			grid-gap: 80px;
 		}
 	}
 
@@ -158,7 +159,17 @@
 		display: block;
 		text-align: center;
 		border: 2px solid @color-peach;
-		padding: 8px 40px;
+		padding: 8px 30px;
 		color: #fff;
+		font-size: 16px;
+
+		@media (min-width: @tablet) {
+			flex: 1 1 50%;
+		}
+
+		@media (min-width: @desktop) {
+			font-size: 20px;
+			padding: 8px 40px;
+		}
 	}
 }
