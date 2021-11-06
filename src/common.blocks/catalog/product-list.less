@@ -21,6 +21,24 @@
 				&__title {
 					color: #fff;
 				}
+
+				@media (min-width: @desktop) {
+					&__text {
+						order: 2;
+					}
+
+					&__img-wrap {
+						order: 1;
+					}
+				}
+
+				@media (min-width: @full) {
+					&__inner {
+						margin-left: unset;
+						margin-right: auto;
+						padding: 25px 16px 50px 50px;
+					}
+				}
 			}
 		}
 	}
