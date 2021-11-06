@@ -4,8 +4,22 @@
 	display: flex;
 	flex-direction: column;
 
+	@media (min-width: @desktop) {
+		flex-direction: row;
+	}
+
 	&__text {
 		order: 2;
+
+		@media (min-width: @tablet) {
+			text-align: center;
+		}
+
+		@media (min-width: @desktop) {
+			order: 1;
+			flex: 0 0 50%;
+			text-align: left;
+		}
 	}
 
 	&__inner {
@@ -22,11 +36,25 @@
 		color: @color-gray;
 		margin-bottom: 20px;
 		font-size: 16px;
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
 	}
 
 	&__button {
 		display: flex;
 		justify-content: flex-start;
+
+		@media (min-width: @tablet) {
+			justify-content: center;
+		}
+
+		@media (min-width: @desktop) {
+			justify-content: left;
+		}
 
 		& span {
 			color: @color-brand;
@@ -34,11 +62,19 @@
 		}
 	}
 
-	&__img {
+	&__img-wrap {
 		order: 1;
 		position: relative;
 		height: 200px;
 
-		@img-block();
+		@media (min-width: @desktop) {
+			order: 2;
+			flex: 0 0 50%;
+			height: unset;
+		}
+	}
+
+	&__img {
+		@fill-bg-img();
 	}
 }
