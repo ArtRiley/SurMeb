@@ -4,9 +4,12 @@
 	margin-top: -50px;
 	--aspect-ratio: 1/1;
 
+	@media (min-width: @tablet) {
+		--aspect-ratio: 16/9;
+	}
+
 	@media (min-width: @desktop) {
 		margin-top: -62px;
-		--aspect-ratio: 16/9;
 	}
 
 	@media (min-width: @full) {

@@ -1,0 +1,44 @@
+@import (reference) '../../less/variables.less';
+
+.product-item {
+	display: flex;
+	flex-direction: column;
+
+	&__text {
+		order: 2;
+	}
+
+	&__inner {
+		padding: 25px 16px 50px;
+	}
+
+	&__title {
+		color: @color-text;
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	&__description {
+		color: @color-gray;
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: flex-start;
+
+		& span {
+			color: @color-brand;
+			font-size: 18px;
+		}
+	}
+
+	&__img {
+		order: 1;
+		position: relative;
+		height: 200px;
+
+		@img-block();
+	}
+}

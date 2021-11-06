@@ -1,34 +1,27 @@
 @import (reference) '../../less/variables.less';
 
-.product-item {
-	display: flex;
-	flex-direction: column;
+.product-list-wrap {
+	margin-bottom: 100px;
+}
 
-	&__text {
-		order: 2;
-	}
+.product-list {
+	margin-bottom: 50px;
 
-	&__inner {
-		padding: 25px 16px 50px;
-	}
+	&__item {
 
-	&__title {
-		color: @color-text;
-	}
+		&:nth-child(2n+1) {
 
-	&__description {
-		color: @color-gray;
-	}
+		}
 
-	&__button {
-		color: @color-brand;
-	}
+		&:nth-child(2n) {
 
-	&__img {
-		order: 1;
-		position: relative;
-		height: 200px;
+			& .product-item {
+				background-color: @color-black;
 
-		@img-block();
+				&__title {
+					color: #fff;
+				}
+			}
+		}
 	}
 }
