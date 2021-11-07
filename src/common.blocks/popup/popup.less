@@ -10,7 +10,7 @@
 	z-index: 4;
 	opacity: 0;
 	pointer-events: none;
-	transition: all .3s ease-out;
+	transition: opacity .3s ease-out;
 	padding: 60px 16px 16px;
 	overflow-y: auto;
 	backdrop-filter: blur(5px);
@@ -29,7 +29,7 @@
 	margin: 0 auto;
 	width: 100%;
 	//max-width: 500px;
-	padding: 16px;
+	padding: 16px 16px 30px;
 	background-color: #fff;
 	position: relative;
 	max-width: 1200px;
@@ -50,7 +50,6 @@
 
 		@media (min-width: @desktop) {
 			top: -56px;
-			right: -56px;
 		}
 
 		& svg {
