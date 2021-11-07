@@ -28,8 +28,8 @@
 // require("expose-loader?slick!slick-carousel");
 
 // swiper slider
-// require("swiper/dist/css/swiper.css");
-// require("expose-loader?Swiper!swiper/dist/js/swiper.js");
+require("swiper/css/swiper.css");
+require("expose-loader?Swiper!swiper/js/swiper.js");
 
 // vue.js
 // import Vue from 'vue';
