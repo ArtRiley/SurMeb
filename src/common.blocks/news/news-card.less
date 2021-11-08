@@ -2,17 +2,50 @@
 
 .news-card {
 
+	&__head {
+		position: relative;
+		margin-bottom: 24px;
+	}
+
 	&__img {
 		--aspect-ratio: 550/400;
 		@img-block();
 	}
 
-	&__title {
+	&__date {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(37, 37, 37, 0.5);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 200px;
+		padding: 8px 0;
+		transform: translateX(-50%);
 
+		& svg {
+			fill: #fff;
+			width: 28px;
+			height: 28px;
+		}
+
+		& span {
+			color: #fff;
+			font-size: 18px;
+			padding-left: 8px;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		margin-bottom: 20px;
 	}
 
 	&__description {
-
+		font-size: 16px;
+		margin-bottom: 30px;
+		color: @color-gray;
 	}
 
 	&__button {
