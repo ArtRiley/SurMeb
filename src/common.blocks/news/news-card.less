@@ -1,6 +1,11 @@
 @import (reference) '../../less/variables.less';
 
 .news-card {
+	padding: 30px 0 30px;
+
+	&__inner {
+		position: relative;
+	}
 
 	&__head {
 		position: relative;
@@ -49,6 +54,12 @@
 	}
 
 	&__button {
+		display: flex;
 
+		& a {
+			color: @color-brand;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
 	}
 }
