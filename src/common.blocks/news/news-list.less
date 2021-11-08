@@ -25,6 +25,9 @@
 		@media (min-width: @desktop) {
 			&:nth-child(2n+1) .news-card { margin: 0 0 0 auto; }
 			&:nth-child(2n+2) .news-card { margin: 0 auto 0 0; }
+
+			&:nth-child(2n+1).points-bg:after { display: none !important; }
+			&:nth-child(2n+2).points-bg:before { display: none !important; }
 		}
 	}
 }
