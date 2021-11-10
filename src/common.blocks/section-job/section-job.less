@@ -1,0 +1,50 @@
+@import (reference) '../../less/variables.less';
+
+.section-job {
+	padding: 50px 0;
+
+	&__text {
+		color: @color-gray;
+		font-size: 16px;
+		margin-bottom: 50px;
+
+		@media (min-width: @tablet) {
+			font-size: 20px;
+		}
+
+		& p {
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+
+		& a {
+			color: @color-brand;
+		}
+	}
+
+	&__list {
+
+	}
+}
+
+.job-list {
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: repeat(1, 1fr);
+
+	@media (min-width: @tablet) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 24px 40px;
+	}
+
+	@media (min-width: @desktop) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px 80px;
+	}
+
+	&__item {
+
+	}
+}

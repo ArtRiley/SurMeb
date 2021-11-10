@@ -1,0 +1,66 @@
+@import (reference) '../../less/variables.less';
+
+.job-item {
+
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+
+	&__title {
+		font-size: 18px;
+	}
+
+	&__control {
+
+		& svg {
+			display: block;
+			width: 16px;
+			height: 16px;
+			fill: @color-brand;
+			transform: rotate(0);
+			transition: transform .3s ease-out;
+
+			.job-item__head.is-open & {
+				transform: rotate(225deg);
+			}
+		}
+	}
+
+	&__body {
+		padding-top: 16px;
+		display: none;
+	}
+
+	&__description {
+		margin-bottom: 24px;
+	}
+
+	&__options {
+
+	}
+}
+
+.job-options {
+	display: grid;
+	grid-gap: 16px;
+
+	&__item {
+
+	}
+
+	&__title {
+		font-size: 16px;
+		margin-bottom: 8px;
+	}
+
+	ul {
+		padding-left: 16px;
+	}
+
+	li {
+		margin: 4px 0;
+	}
+}
