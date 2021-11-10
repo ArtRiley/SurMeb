@@ -1,0 +1,24 @@
+@import (reference) '../../less/variables.less';
+
+.video-card {
+	position: relative;
+	display: block;
+
+	&__img {
+		--aspect-ratio: 16/9;
+		@img-block();
+	}
+
+	&__play {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		& svg {
+			display: block;
+			width: 48px;
+			height: 48px;
+		}
+	}
+}
