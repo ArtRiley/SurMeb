@@ -2,30 +2,34 @@
 
 .main-banner {
 	margin-top: -50px;
-	--aspect-ratio: 1/1;
-
-	@media (min-width: @tablet) {
-		--aspect-ratio: 16/9;
-	}
 
 	@media (min-width: @desktop) {
 		margin-top: -62px;
 	}
 
-	@media (min-width: @full) {
-		--aspect-ratio: 18/8;
+	&__img {
+		--aspect-ratio: 1/1;
+
+		@media (min-width: @tablet) {
+			--aspect-ratio: 16/9;
+		}
+
+		@media (min-width: @full) {
+			--aspect-ratio: 18/8;
+		}
+
+		@img-block();
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, .3);
+			z-index: 1;
+		}
 	}
 
-	@img-block();
-
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, .3);
-		z-index: 1;
-	}
 }
