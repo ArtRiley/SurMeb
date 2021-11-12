@@ -1,0 +1,68 @@
+@import (reference) '../../../less/variables.less';
+
+.button {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-family: 'Roboto', Helvetica, Arial sans-serif;
+    transition: all .3s ease-out;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+
+    /* size */
+    &_sm {
+        height: 36px;
+        font-size: 16px;
+    }
+
+    &_md {
+        height: 44px;
+        font-size: 18px;
+    }
+
+    &_lg {
+        height: 56px;
+        font-size: 18px;
+    }
+    /* size */
+
+    /* color */
+    &_primary {
+        background-color: @color-brand;
+        border-color: @color-brand;
+        color: #fff;
+
+        &:hover { background-color: @color-peach-dark; border-color: @color-peach-dark; }
+        &:active { background-color: @color-peach-dark; border-color: @color-peach-dark; }
+    }
+    /* color */
+
+    &__icon {
+        margin-right: 6px;
+
+        & svg {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &_primary &__icon {
+        fill: #fff;
+    }
+
+    &_secondary &__icon {
+        fill: @color-peach-dark;
+    }
+
+    &_neutral &__icon {
+        fill: @color-peach-dark;
+    }
+
+    &__caption {
+
+    }
+}

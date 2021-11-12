@@ -20,9 +20,14 @@
 		font-size: 18px;
 		padding: 8px 0;
 		cursor: pointer;
+		transition: .3s ease-out color;
 
 		@media (min-width: @desktop) {
 			font-size: 16px;
+		}
+
+		&:hover {
+			color: @color-brand !important;
 		}
 
 		&_dropdown {

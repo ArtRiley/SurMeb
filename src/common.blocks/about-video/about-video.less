@@ -1,0 +1,22 @@
+@import (reference) '../../less/variables.less';
+
+.about-video {
+	margin-top: -50px;
+
+	@media (min-width: @desktop) {
+		margin-top: -62px;
+	}
+
+	.video-card__img:before {
+		padding-bottom: 300px;
+
+		@media (min-width: @tablet) {
+			padding-bottom: 400px;
+		}
+
+		@media (min-width: @desktop) {
+			padding-bottom: 500px;
+		}
+	}
+
+}
