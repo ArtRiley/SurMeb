@@ -1,0 +1,60 @@
+@import (reference) '../../less/variables.less';
+
+.section-our-advantage {
+	padding: 50px 0;
+
+	&__list {
+		max-width: 500px;
+		margin: 0 auto;
+
+		@media (min-width: @desktop) {
+			max-width: unset;
+			margin: unset;
+		}
+
+		ol {
+			counter-reset: selection-counter;
+			list-style: none;
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 20px;
+
+			@media (min-width: @tablet) {
+				grid-gap: 50px;
+			}
+
+			@media (min-width: @desktop) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			& li {
+				counter-increment: selection-counter;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				font-size: 16px;
+				color: @color-gray;
+
+				@media (min-width: @tablet) {
+					flex-direction: row;
+					text-align: left;
+				}
+
+				&:before {
+					content: '0'counter(selection-counter);
+					color: @color-black;
+					font-size: 36px;
+					margin-bottom: 4px;
+
+					@media (min-width: @tablet) {
+						margin-bottom: unset;
+						margin-right: 16px;
+						font-size: 48px;
+					}
+				}
+			}
+		}
+	}
+}
