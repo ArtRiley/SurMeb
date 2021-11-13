@@ -1,1 +1,63 @@
 @import (reference) '../../less/variables.less';
+
+.about-block {
+	padding: 50px 0 0;
+	background-color: @color-black;
+	color: #fff;
+
+	& .section-title-caption {
+		padding-top: 8px;
+		position: relative;
+
+		@media (min-width: @tablet) {
+			padding-top: 16px;
+		}
+
+		&:before {
+			content: '';
+			height: 2px;
+			width: 100px;
+			background-color: @color-brand;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__section {
+		margin: 50px 0;
+	}
+
+	&__description {
+		font-size: 16px;
+		color: @color-gray;
+
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__feature {
+
+	}
+
+	&__bottom {
+		position: relative;
+		height: 100px;
+
+		@media (min-width: @tablet) {
+			height: 200px;
+		}
+
+		@media (min-width: @desktop) {
+			height: 300px;
+		}
+	}
+
+	&__bottom-bg {
+		@fill-bg-img();
+	}
+}
