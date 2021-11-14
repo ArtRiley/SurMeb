@@ -67,5 +67,14 @@
 
 	&__caption {
 		font-size: 16px;
+
+		& a {
+			color: @color-brand;
+			transition: color .3s ease-out;
+
+			&:hover {
+				color: @color-brand-hover;
+			}
+		}
 	}
 }
