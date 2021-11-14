@@ -1,3 +1,5 @@
+@import (reference) '../../../less/variables.less';
+
 .input {
 	display: block;
 	height: 50px;
@@ -6,6 +8,19 @@
 	background-color: unset;
 	color: #fff;
 	padding: 0 20px;
+	width: 100%;
+	transition: border-color 0.3s ease;
+	resize: none;
+}
+
+.textarea {
+	display: block;
+	border: 1px solid #C7C7C7;
+	min-height: 150px;
+	border-radius: 4px;
+	background-color: unset;
+	color: #fff;
+	padding: 16px 20px;
 	width: 100%;
 	transition: border-color 0.3s ease;
 	resize: none;
