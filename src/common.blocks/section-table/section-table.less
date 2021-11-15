@@ -1,0 +1,48 @@
+@import (reference) '../../less/variables.less';
+
+.section-table {
+	padding: 0 0 50px;
+
+	&__inner {
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+
+	& tr {
+
+	}
+
+	& th {
+		font-size: 16px;
+		padding: 4px 20px 8px;
+		text-align: left;
+		font-weight: 400;
+		color: @color-gray-dark;
+		border-bottom: 1px solid @color-gray;
+
+		&:not(:first-child) {
+			border-left: 1px solid @color-gray;
+		}
+	}
+
+	& td {
+		vertical-align: top;
+		font-size: 14px;
+		padding: 16px 20px;
+		color: @color-gray;
+		border-bottom: 1px solid @color-gray;
+
+		&:first-child {
+			color: @color-brand;
+		}
+
+		&:not(:first-child) {
+			border-left: 1px solid @color-gray;
+		}
+	}
+}
