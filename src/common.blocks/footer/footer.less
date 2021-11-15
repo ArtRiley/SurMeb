@@ -62,14 +62,20 @@
 		& a {
 
 			& svg {
+				display: block;
 				fill: #fff;
 				width: 20px;
 				height: 20px;
+				transition: fill .3s ease-out;
 
 				@media (min-width: @tablet) {
 					width: 26px;
 					height: 26px;
 				}
+			}
+
+			&:hover svg {
+				fill: @color-brand;
 			}
 		}
 	}

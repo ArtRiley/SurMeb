@@ -10,10 +10,15 @@
 		font-size: 24px;
 		padding-right: 10px;
 		color: #fff;
+		transition: color .3s ease-out;
 
 		@media (min-width: @tablet) {
 			font-size: 32px;
 		}
+	}
+
+	&:hover &__caption {
+		color: @color-brand-hover;
 	}
 
 	&__icon {
@@ -22,11 +27,17 @@
 			width: 30px;
 			height: 30px;
 			display: block;
+			fill: @color-brand;
+			transition: fill .3s ease-out;
 
 			@media (min-width: @tablet) {
 				width: 36px;
 				height: 36px;
 			}
 		}
+	}
+
+	&:hover &__icon svg {
+		fill: @color-brand-hover;
 	}
 }
