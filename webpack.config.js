@@ -264,6 +264,10 @@ module.exports = {
       template: 'src/contacts.html',
       filename: 'contacts.html',
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/team.html',
+      filename: 'team.html',
+    }),
     // для добавления отдельной html страницы нужно подключить новый HtmlWebpackPlugin
     /* new HtmlWebpackPlugin({
       template: 'src/test.html',
