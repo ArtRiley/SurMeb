@@ -1,18 +1,36 @@
-<section class="section-feedback">
+<section id="cooperation" class="section-feedback points-bg">
 
-
+	<div id="suggestions" class="container">
+		<div class="tabs">
+			<div class="tabs__tabs-panel">
+				<div class="tabs-list">
+					<div class="tabs-list__item is-active">Сотрудничество</div>
+					<div class="tabs-list__item">Жалобы и предложения</div>
+				</div>
+			</div>
+			<div class="tabs__content-panel">
+				<div class="tabs-content">
+					<div class="tabs-content__item is-active">
+						${require('./form-cooperation.html')}
+					</div>
+					<div class="tabs-content__item">
+						${require('./form-suggestions.html')}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--
 	<div id="cooperation" class="section-feedback__item points-bg">
 		<div class="container">
 			${require('./form-cooperation.html')}
 		</div>
 	</div>
 
-
 	<div id="suggestions" class="section-feedback__item points-bg">
 		<div class="container">
 			${require('./form-suggestions.html')}
 		</div>
 	</div>
-
-
+-->
 </section>
