@@ -1,7 +1,11 @@
 import GLightbox from 'glightbox';
 
-const myGallery = GLightbox({
-  selector: '.js-glightbox-video',
-});
+function initGlightbox() {
+  GLightbox({
+    selector: '.js-glightbox-video',
+  });
+}
 
-console.log(myGallery);
+window.initGlightbox = initGlightbox;
+
+initGlightbox();

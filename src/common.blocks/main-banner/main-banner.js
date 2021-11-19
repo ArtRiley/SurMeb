@@ -2,6 +2,7 @@
 
 new Swiper ('.main-banner .swiper-container', {
   direction: 'horizontal',
+  effect: "fade",
   spaceBetween: 0,
   simulateTouch: true,
   slidesPerView: 1,
