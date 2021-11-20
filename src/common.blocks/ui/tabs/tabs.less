@@ -31,6 +31,7 @@
 		color: @color-gray-dark;
 		cursor: pointer;
 		padding: 0 32px;
+		transition: color .3s ease-out;
 
 		&:first-child {
 			padding-left: 0;
@@ -42,6 +43,10 @@
 
 		&:not(:last-child) {
 			border-right: 1px solid @color-brand;
+		}
+
+		&:hover {
+			color: @color-gray;
 		}
 
 		&.is-active {
