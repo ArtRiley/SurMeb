@@ -38,8 +38,18 @@
 			order: 1;
 		}
 
-		& a { color: @color-brand; }
-		& span { color: @color-brand; }
+		& a {
+			color: @color-brand;
+			transition: color .3s ease-out;
+
+			&:hover {
+				color: @color-brand-hover;
+			}
+		}
+
+		& span {
+			color: @color-brand;
+		}
 	}
 
 	&__description {
