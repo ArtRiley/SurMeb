@@ -1,0 +1,34 @@
+@import (reference) '../../less/variables.less';
+
+.video-banner {
+	margin-top: -62px;
+	--aspect-ratio: 1/1;
+
+	@media (min-width: @tablet) {
+		--aspect-ratio: 16/9;
+	}
+
+	@media (min-width: @full) {
+		--aspect-ratio: 19/5;
+	}
+
+	&__bg {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: calc(100% / (var(--aspect-ratio)));
+		}
+
+		& video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+}
