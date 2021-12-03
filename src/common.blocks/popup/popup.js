@@ -6,7 +6,7 @@ $('.js-close-popup').click((e) => {
 });
 
 // const popupList = $('.popup');
-const popupAreaList = $('.js-popup-area');
+// const popupAreaList = $('.js-popup-area');
 const popupFrameList = $('.popup-frame');
 const openPopup = $('.js-open-popup');
 
@@ -34,7 +34,8 @@ function closeAllPopup() {
 }
 
 $(document).mouseup((e) => {
-  if (!popupAreaList.is(e.target) && popupAreaList.has(e.target).length === 0) {
+  // if (!popupAreaList.is(e.target) && popupAreaList.has(e.target).length === 0) {
+  if ($('.popup-frame').is(e.target)) {
     closeAllPopup();
   }
 });

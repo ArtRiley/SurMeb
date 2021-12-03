@@ -33,3 +33,15 @@ new Swiper ('.swiper-gallery .swiper-container', {
   //   clickable: true
   // },
 });
+
+import GLightbox from 'glightbox';
+
+function initGlightboxGallery() {
+  GLightbox({
+    selector: '.js-glightbox-gallery',
+  });
+}
+
+window.initGlightboxGallery = initGlightboxGallery;
+
+initGlightboxGallery();
